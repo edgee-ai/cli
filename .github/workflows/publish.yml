@@ -1,4 +1,4 @@
-name: Publish releases
+name: Publish edgee-cli crates
 on:
   release:
     types: [published]

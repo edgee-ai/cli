@@ -51,9 +51,12 @@ uuid = { workspace = true, features = ["v4"] }
 wit-deps.workspace = true
 zip.workspace = true
 
-api-client.workspace = true
-proxy.workspace = true
+api-client = { path = "../api-client" }
+proxy = { path = "../proxy" }
 
+[[bin]]
+name = "edgee"
+path = "src/main.rs"
 
 [features]
 bundled = ["openssl/vendored"]
