@@ -132,10 +132,10 @@ pub async fn run(_opts: Options) -> anyhow::Result<()> {
             (
                 component_path.to_string(),
                 match manifest.component.category {
-                    edgee_api_client::types::ComponentCreateInputCategory::DataCollection => {
+                    api_client::types::ComponentCreateInputCategory::DataCollection => {
                         ComponentType::DataCollection
                     }
-                    edgee_api_client::types::ComponentCreateInputCategory::EdgeFunction => {
+                    api_client::types::ComponentCreateInputCategory::EdgeFunction => {
                         ComponentType::EdgeFunction
                     }
                     _ => anyhow::bail!(

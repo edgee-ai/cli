@@ -1,6 +1,6 @@
 use anyhow::Result;
 
-use edgee_api_client::ResultExt;
+use api_client::ResultExt;
 
 setup_command! {
     #[arg(short, long, id = "PROFILE", env = "EDGEE_API_PROFILE")]
@@ -13,7 +13,7 @@ setup_command! {
 pub async fn run(opts: Options) -> Result<()> {
     use inquire::{Confirm, Password, PasswordDisplayMode};
 
-    use edgee_api_client::auth::{Config, Credentials};
+    use api_client::auth::{Config, Credentials};
 
     let url = match opts.url {
         Some(url) => url,
@@ -57,7 +57,7 @@ pub async fn run(opts: Options) -> Result<()> {
         url: Some(url),
     };
 
-    let client = edgee_api_client::new().credentials(&creds).connect();
+    let client = api_client::new().credentials(&creds).connect();
     let user = client
         .get_me()
         .send()

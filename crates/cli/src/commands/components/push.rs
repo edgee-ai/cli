@@ -2,10 +2,10 @@ use std::io::Read;
 
 use anyhow::Result;
 use colored::Colorize;
-use edgee_api_client::{auth::Config, ErrorExt, ResultExt};
+use api_client::{auth::Config, ErrorExt, ResultExt};
 use inquire::{Confirm, Editor, Select};
 
-use edgee_api_client::{types as api_types, Client};
+use api_client::{types as api_types, Client};
 
 use crate::components::manifest::Manifest;
 
@@ -114,7 +114,7 @@ pub async fn run(opts: Options) -> Result<()> {
         anyhow::bail!("Component name must be at least 3 characters");
     }
 
-    let client = edgee_api_client::new().credentials(&creds).connect();
+    let client = api_client::new().credentials(&creds).connect();
 
     let organization = match opts.organization {
         Some(ref organization) => client
@@ -144,9 +144,9 @@ pub async fn run(opts: Options) -> Result<()> {
         .send()
         .await
     {
-        Err(edgee_api_client::Error::ErrorResponse(err))
+        Err(api_client::Error::ErrorResponse(err))
             if err.error.type_
-                == edgee_api_client::types::ErrorResponseErrorType::NotFoundError =>
+                == api_client::types::ErrorResponseErrorType::NotFoundError =>
         {
             tracing::info!(
                 "Component {} does not exist yet!",
@@ -350,7 +350,7 @@ async fn update_component(
 ) -> Result<()> {
     use inquire::Confirm;
 
-    use edgee_api_client::ResultExt;
+    use api_client::ResultExt;
 
     let final_icon_url = if let Some(manifest_icon_path) = &manifest.component.icon_path {
         let manifest_avatar_hash = {
@@ -457,7 +457,7 @@ async fn push_version(
     component_slug: &str,
     changelog: Option<String>,
 ) -> Result<()> {
-    use edgee_api_client::ResultExt;
+    use api_client::ResultExt;
 
     tracing::info!("Uploading WASM file...");
     let asset_url = client

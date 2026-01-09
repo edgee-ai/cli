@@ -288,6 +288,27 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a23eb6b1614318a8071c9b2521f36b424b2c83db5eb3a0fead4a6c0809af6e61"
 
 [[package]]
+name = "api-client"
+version = "1.0.0"
+dependencies = [
+ "anyhow",
+ "bon",
+ "chrono",
+ "cookie",
+ "dirs",
+ "easy-ext",
+ "progenitor",
+ "progenitor-client",
+ "regress",
+ "reqwest 0.12.28",
+ "schemars 1.2.0",
+ "serde",
+ "serde_json",
+ "toml 0.9.10+spec-1.1.0",
+ "uuid",
+]
+
+[[package]]
 name = "arbitrary"
 version = "1.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1610,31 +1631,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cc5d6d6a8504f8caedd7de14576464383900cd3840b7033a7a3dce5ac00121ca"
 
 [[package]]
-name = "edgee-api-client"
-version = "1.3.0"
-dependencies = [
- "anyhow",
- "bon",
- "chrono",
- "cookie",
- "dirs",
- "easy-ext",
- "progenitor",
- "progenitor-client",
- "regress",
- "reqwest 0.12.28",
- "schemars 1.2.0",
- "serde",
- "serde_json",
- "toml 0.9.10+spec-1.1.0",
- "uuid",
-]
-
-[[package]]
 name = "edgee-cli"
-version = "1.3.0"
+version = "1.0.0"
 dependencies = [
  "anyhow",
+ "api-client",
  "bon",
  "chrono",
  "clap",
@@ -1642,9 +1643,7 @@ dependencies = [
  "colored",
  "colored_json",
  "dirs",
- "edgee-api-client",
  "edgee-components-runtime",
- "edgee-proxy",
  "http 1.4.0",
  "http-body-util",
  "hyper 1.8.1",
@@ -1655,6 +1654,7 @@ dependencies = [
  "open",
  "openssl",
  "os_info",
+ "proxy",
  "reqwest 0.12.28",
  "self_update",
  "sentry",
@@ -1710,52 +1710,6 @@ checksum = "967cc1f88d856a83ccb1b9a8d32672014042ec0672d2a399c1359f96e7d34753"
 dependencies = [
  "md5",
  "serde",
-]
-
-[[package]]
-name = "edgee-proxy"
-version = "1.3.0"
-dependencies = [
- "addr",
- "aes",
- "anyhow",
- "base64 0.22.1",
- "bytes",
- "cargo-llvm-cov",
- "cbc",
- "chrono",
- "cookie",
- "edgee-components-runtime",
- "edgee-dc-sdk",
- "futures",
- "hex",
- "html-escape",
- "http 1.4.0",
- "http-body-util",
- "hyper 1.8.1",
- "hyper-rustls 0.27.7",
- "hyper-util",
- "ipnetwork",
- "json_comments",
- "lazy_static",
- "lol_html",
- "pin-project",
- "pretty_assertions",
- "regex",
- "reqwest 0.12.28",
- "rustls 0.23.35",
- "rustls-pemfile 2.2.0",
- "rustls-pki-types",
- "serde",
- "serde_json",
- "serde_with",
- "tokio",
- "tokio-rustls 0.26.4",
- "tower",
- "tower-http",
- "tracing",
- "url",
- "uuid",
 ]
 
 [[package]]
@@ -3822,6 +3776,52 @@ dependencies = [
  "serde_tokenstream",
  "serde_yaml",
  "syn",
+]
+
+[[package]]
+name = "proxy"
+version = "1.0.0"
+dependencies = [
+ "addr",
+ "aes",
+ "anyhow",
+ "base64 0.22.1",
+ "bytes",
+ "cargo-llvm-cov",
+ "cbc",
+ "chrono",
+ "cookie",
+ "edgee-components-runtime",
+ "edgee-dc-sdk",
+ "futures",
+ "hex",
+ "html-escape",
+ "http 1.4.0",
+ "http-body-util",
+ "hyper 1.8.1",
+ "hyper-rustls 0.27.7",
+ "hyper-util",
+ "ipnetwork",
+ "json_comments",
+ "lazy_static",
+ "lol_html",
+ "pin-project",
+ "pretty_assertions",
+ "regex",
+ "reqwest 0.12.28",
+ "rustls 0.23.35",
+ "rustls-pemfile 2.2.0",
+ "rustls-pki-types",
+ "serde",
+ "serde_json",
+ "serde_with",
+ "tokio",
+ "tokio-rustls 0.26.4",
+ "tower",
+ "tower-http",
+ "tracing",
+ "url",
+ "uuid",
 ]
 
 [[package]]

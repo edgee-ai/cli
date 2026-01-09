@@ -1,5 +1,6 @@
 [package]
-name = "edgee-api-client"
+name = "api-client"
+publish = false
 description = "Edgee API client"
 version.workspace = true
 authors.workspace = true

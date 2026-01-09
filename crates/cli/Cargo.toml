@@ -13,11 +13,13 @@ edition.workspace = true
 [dependencies]
 anyhow.workspace = true
 bon.workspace = true
+chrono.workspace = true
 clap = { workspace = true, features = ["derive", "env"] }
 clap_complete.workspace = true
 colored.workspace = true
 colored_json.workspace = true
 dirs.workspace = true
+edgee-components-runtime.workspace = true
 http.workspace = true
 http-body-util.workspace = true
 hyper = { workspace = true, features = ["server"] }
@@ -49,10 +51,9 @@ uuid = { workspace = true, features = ["v4"] }
 wit-deps.workspace = true
 zip.workspace = true
 
-edgee-api-client.workspace = true
-edgee-proxy.workspace = true
-edgee-components-runtime.workspace = true
-chrono.workspace = true
+api-client.workspace = true
+proxy.workspace = true
+
 
 [features]
 bundled = ["openssl/vendored"]

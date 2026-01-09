@@ -72,7 +72,7 @@ pub async fn run(opts: Options) -> anyhow::Result<()> {
     crate::commands::components::build::do_build(&manifest, root_dir).await?;
 
     match manifest.component.category {
-        edgee_api_client::types::ComponentCreateInputCategory::DataCollection => {
+        api_client::types::ComponentCreateInputCategory::DataCollection => {
             match manifest.component.wit_version.as_str() {
                 "1.0.0" => {
                     test_data_collection_v1_0_0::test_data_collection_component_1_0_0(
@@ -94,7 +94,7 @@ pub async fn run(opts: Options) -> anyhow::Result<()> {
                 }
             }
         }
-        edgee_api_client::types::ComponentCreateInputCategory::EdgeFunction => {
+        api_client::types::ComponentCreateInputCategory::EdgeFunction => {
             match manifest.component.wit_version.as_str() {
                 "1.0.0" => {
                     test_edge_function_v1_0_0::test_edge_function_component(opts, &manifest)

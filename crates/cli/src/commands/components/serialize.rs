@@ -46,8 +46,8 @@ fn extract_from_manifest() -> anyhow::Result<(String, String, String)> {
         .context("Output path should be a valid UTF-8 string")?;
 
     let component_type = match manifest.component.category {
-        edgee_api_client::types::ComponentCreateInputCategory::DataCollection => "data-collection",
-        edgee_api_client::types::ComponentCreateInputCategory::EdgeFunction => "edge-function",
+        api_client::types::ComponentCreateInputCategory::DataCollection => "data-collection",
+        api_client::types::ComponentCreateInputCategory::EdgeFunction => "edge-function",
         _ => anyhow::bail!(
             "Invalid component type: {}, expected 'data-collection' or 'edge-function'",
             manifest.component.category
