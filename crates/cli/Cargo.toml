@@ -51,8 +51,8 @@ uuid = { workspace = true, features = ["v4"] }
 wit-deps.workspace = true
 zip.workspace = true
 
-api-client = { path = "../api-client" }
-proxy = { path = "../proxy" }
+api-client.workspace = true
+proxy.workspace = true
 
 [[bin]]
 name = "edgee"

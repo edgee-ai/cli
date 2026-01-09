@@ -93,5 +93,5 @@ wasmtime-wasi-http = "37.0"
 wit-deps = "0.5.0"
 zip = "5.1.1"
 
-proxy = { path = "crates/proxy" }
-api-client = { path = "crates/api-client" }
+proxy = { version = "1.0.0", path = "crates/proxy" }
+api-client = { version = "1.0.0", path = "crates/api-client" }
