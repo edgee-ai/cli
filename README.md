@@ -54,15 +54,6 @@ Install the Edgee CLI with your preferred method:
 </details>
 
 <details>
-  <summary>Cargo binstall</summary>
-
-  ```shell
-  $ cargo binstall edgee-cli
-  ```
-
-</details>
-
-<details>
   <summary>From source</summary>
 
   ```shell
