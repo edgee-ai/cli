@@ -1,4 +1,4 @@
-use edgee_api_client::ResultExt;
+use api_client::ResultExt;
 
 setup_command! {
     #[arg(short, long, id = "PROFILE", env = "EDGEE_API_PROFILE")]
@@ -6,7 +6,7 @@ setup_command! {
 }
 
 pub async fn run(opts: Options) -> anyhow::Result<()> {
-    use edgee_api_client::auth::Config;
+    use api_client::auth::Config;
 
     let config = Config::load()?;
 
@@ -26,7 +26,7 @@ pub async fn run(opts: Options) -> anyhow::Result<()> {
 
     creds.check_api_token()?;
 
-    let client = edgee_api_client::new().credentials(&creds).connect();
+    let client = api_client::new().credentials(&creds).connect();
     let user = client
         .get_me()
         .send()

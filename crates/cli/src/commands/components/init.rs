@@ -38,10 +38,10 @@ pub async fn run(_opts: Options) -> anyhow::Result<()> {
     };
 
     let subcategories = match component_category.value {
-        edgee_api_client::types::ComponentCreateInputCategory::DataCollection => {
+        api_client::types::ComponentCreateInputCategory::DataCollection => {
             DATA_COLLECTION_SUBCATEGORY_OPTIONS.to_vec()
         }
-        edgee_api_client::types::ComponentCreateInputCategory::EdgeFunction => {
+        api_client::types::ComponentCreateInputCategory::EdgeFunction => {
             EDGE_FUNCTION_SUBCATEGORY_OPTIONS.to_vec()
         }
         _ => {
@@ -106,7 +106,7 @@ pub async fn run(_opts: Options) -> anyhow::Result<()> {
                     options: None,
                     required: true,
                     title: "ExampleConfigField".to_string(),
-                    type_: edgee_api_client::types::ConfigurationFieldType::String,
+                    type_: api_client::types::ConfigurationFieldType::String,
                     secret: Some(false),
                 },
             },

@@ -10,7 +10,7 @@ set -u
 # Package metadata
 
 GITHUB_OWNER='edgee-cloud'
-GITHUB_REPO='edgee'
+GITHUB_REPO='cli'
 
 # Helper utilities
 
@@ -131,11 +131,11 @@ download_latest() {
 
     cat <<EOF
 
-${_bold}${_blue}Edgee${_normal} ${_green}$_edgee_version${_normal} binary successfully downloaded as 'edgee' file.
+${_bold}${_blue}Edgee CLI${_normal} ${_green}$_edgee_version${_normal} binary successfully downloaded as 'edgee' file.
 
 ${_underline}Run it:${_normal}
 
-${_gray}$ ./edgee serve${_normal}
+${_gray}$ ./edgee proxy${_normal}
 
 ${_underline}Usage:${_normal}
 

@@ -7,7 +7,7 @@ use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use tokio::sync::Mutex;
 
-use edgee_api_client::{data_collection as dc, types::UserWithRoles};
+use api_client::{data_collection as dc, types::UserWithRoles};
 use event_builder::{IsComplete, IsUnset, SetProperties, State};
 
 static STATE_DIR: LazyLock<Option<PathBuf>> = LazyLock::new(|| {
@@ -57,11 +57,11 @@ impl Data {
     }
 
     async fn check_user(&mut self) -> Result<()> {
-        use edgee_api_client::auth::Config;
+        use api_client::auth::Config;
 
         if !self.is_logged_in {
             if let Some(creds) = Config::load().ok().and_then(|config| config.get(&None)) {
-                let client = edgee_api_client::new().credentials(&creds).connect();
+                let client = api_client::new().credentials(&creds).connect();
                 let user = client.get_me().send().await?;
 
                 self.is_logged_in = true;

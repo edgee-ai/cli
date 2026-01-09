@@ -1,6 +1,6 @@
 use std::fmt;
 
-use edgee_api_client::types as api_types;
+use api_client::types as api_types;
 
 #[derive(Clone)]
 pub struct LanguageConfig {

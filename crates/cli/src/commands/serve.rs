@@ -27,10 +27,10 @@ pub async fn run(opts: Options) -> anyhow::Result<()> {
 
     logger::init(opts.log_format, log_filter);
 
-    edgee_proxy::init()?;
+    proxy::init()?;
 
     tokio::select! {
-        Err(err) = edgee_proxy::monitor::start() => Err(err),
-        Err(err) = edgee_proxy::start() => Err(err),
+        Err(err) = proxy::monitor::start() => Err(err),
+        Err(err) = proxy::start() => Err(err),
     }
 }
