@@ -1,12 +1,12 @@
 use clap::Parser;
 
+mod api_client;
 mod commands;
 mod components;
 mod config;
 mod logger;
-mod telemetry;
-mod api_client;
 mod proxy;
+mod telemetry;
 
 use std::process::ExitCode;
 
