@@ -135,7 +135,7 @@ ${_bold}${_blue}Edgee CLI${_normal} ${_green}$_edgee_version${_normal} binary su
 
 ${_underline}Run it:${_normal}
 
-${_gray}$ ./edgee proxy${_normal}
+${_gray}$ ./edgee${_normal}
 
 ${_underline}Usage:${_normal}
 
