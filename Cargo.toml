@@ -93,6 +93,10 @@ zip = "5.1.1"
 cargo-llvm-cov = "0.6.18"
 pretty_assertions = "1.4.1"
 
+[[bin]]
+name = "edgee"
+path = "src/main.rs"
+
 [features]
 bundled = ["openssl/vendored"]
 no-self-update = []
