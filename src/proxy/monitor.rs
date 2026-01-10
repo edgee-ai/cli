@@ -1,5 +1,5 @@
-use bytes::Bytes;
 use crate::proxy::config;
+use bytes::Bytes;
 use http::{Request, Response, StatusCode};
 use http_body_util::{combinators::BoxBody, BodyExt, Empty};
 use hyper::{body::Incoming, service::service_fn};

@@ -268,7 +268,10 @@ pub fn bad_gateway_error(
     request: &RequestHandle,
     timer_start: Instant,
 ) -> anyhow::Result<Response> {
-    static HTML: &str = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/src/proxy/public/502.html"));
+    static HTML: &str = include_str!(concat!(
+        env!("CARGO_MANIFEST_DIR"),
+        "/src/proxy/public/502.html"
+    ));
 
     info!(
         "502 - {} {}{} - {}ms",
