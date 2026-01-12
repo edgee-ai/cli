@@ -99,7 +99,7 @@ pub async fn run(_opts: Options) -> anyhow::Result<()> {
             Additional resources: [Resource example](https://your-resource-link.com)
             "#.to_string()),
             documentation: Some(Url::parse("https://www.edgee.cloud/docs/introduction")?),
-            repository: Some(Url::parse("https://www.github.com/edgee-cloud/edgee")?),
+            repository: Some(Url::parse("https://www.github.com/edgee-cloud/cli")?),
             settings: indexmap::indexmap! {
                 "example".to_string() => Setting {
                     description: Some("Here is a string".to_string()),
