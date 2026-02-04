@@ -37,12 +37,12 @@ pub async fn run(opts: Options) -> Result<()> {
         .with_default(true);
 
             if confirm_auto_open_browser.prompt()? {
-                open::that("https://www.edgee.cloud/~/account/tokens")?;
+                open::that("https://www.edgee.ai/~/account/tokens")?;
             }
 
             Password::new("Enter Edgee API token (press Ctrl+R to toggle input display):")
                 .with_help_message(
-                    "You can create one at https://www.edgee.cloud/~/account/tokens",
+                    "You can create one at https://www.edgee.ai/~/account/tokens",
                 )
                 .with_display_mode(PasswordDisplayMode::Masked)
                 .with_display_toggle_enabled()

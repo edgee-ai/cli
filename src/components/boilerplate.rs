@@ -47,7 +47,7 @@ impl fmt::Display for SubCategoryConfig {
 pub static LANGUAGE_OPTIONS: &[LanguageConfig] = &[
     LanguageConfig {
         name: "C",
-        repo_url: "https://github.com/edgee-cloud/example-c-component",
+        repo_url: "https://github.com/edgee-ai/example-c-component",
         default_build_command: "gcc main.c -o main",
         alias: &["c"],
         wit_world_extra: "",
@@ -55,7 +55,7 @@ pub static LANGUAGE_OPTIONS: &[LanguageConfig] = &[
     },
     LanguageConfig {
         name: "CSharp",
-        repo_url: "https://github.com/edgee-cloud/example-csharp-component",
+        repo_url: "https://github.com/edgee-ai/example-csharp-component",
         default_build_command: "dotnet build",
         alias: &["csharp", "cs", "c#"],
         wit_world_extra: "",
@@ -63,7 +63,7 @@ pub static LANGUAGE_OPTIONS: &[LanguageConfig] = &[
     },
     LanguageConfig {
         name: "Go",
-        repo_url: "https://github.com/edgee-cloud/example-go-component",
+        repo_url: "https://github.com/edgee-ai/example-go-component",
         default_build_command: "go build -o main .",
         alias: &["go", "golang"],
         wit_world_extra: "\
@@ -77,7 +77,7 @@ cli = \"https://github.com/WebAssembly/wasi-cli/archive/refs/tags/v0.2.0.tar.gz\
     },
     LanguageConfig {
         name: "JavaScript",
-        repo_url: "https://github.com/edgee-cloud/example-js-component",
+        repo_url: "https://github.com/edgee-ai/example-js-component",
         default_build_command: "node main.js",
         alias: &["js", "javascript"],
         wit_world_extra: "",
@@ -85,7 +85,7 @@ cli = \"https://github.com/WebAssembly/wasi-cli/archive/refs/tags/v0.2.0.tar.gz\
     },
     LanguageConfig {
         name: "Python",
-        repo_url: "https://github.com/edgee-cloud/example-py-component",
+        repo_url: "https://github.com/edgee-ai/example-py-component",
         default_build_command: "python main.py",
         alias: &["py", "python"],
         wit_world_extra: "",
@@ -93,7 +93,7 @@ cli = \"https://github.com/WebAssembly/wasi-cli/archive/refs/tags/v0.2.0.tar.gz\
     },
     LanguageConfig {
         name: "Rust",
-        repo_url: "https://github.com/edgee-cloud/example-rust-component",
+        repo_url: "https://github.com/edgee-ai/example-rust-component",
         default_build_command: "cargo build --release",
         alias: &["rs", "rust"],
         wit_world_extra: "",
@@ -101,7 +101,7 @@ cli = \"https://github.com/WebAssembly/wasi-cli/archive/refs/tags/v0.2.0.tar.gz\
     },
     LanguageConfig {
         name: "TypeScript",
-        repo_url: "https://github.com/edgee-cloud/example-ts-component",
+        repo_url: "https://github.com/edgee-ai/example-ts-component",
         default_build_command: "npx tsc",
         alias: &["ts", "typescript"],
         wit_world_extra: "",
@@ -156,7 +156,7 @@ mod tests {
     fn test_language_config_display() {
         let config = LanguageConfig {
             name: "Rust",
-            repo_url: "https://github.com/edgee-cloud/example-rust-component",
+            repo_url: "https://github.com/edgee-ai/example-rust-component",
             default_build_command: "cargo build --release",
             alias: &["rs", "rust"],
             wit_world_extra: "",

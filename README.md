@@ -1,30 +1,30 @@
 <div align="center">
 
 <p align="center">
-  <a href="https://www.edgee.cloud">
+  <a href="https://www.edgee.ai">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://cdn.edgee.cloud/img/favicon-dark.svg">
-      <img src="https://cdn.edgee.cloud/img/favicon.svg" height="100" alt="Edgee">
+      <source media="(prefers-color-scheme: dark)" srcset="https://cdn.edgee.ai/img/favicon-dark.svg">
+      <img src="https://cdn.edgee.ai/img/favicon.svg" height="100" alt="Edgee">
     </picture>
     <h1 align="center">Edgee CLI</h1>
   </a>
 </p>
 
-[![Edgee](https://img.shields.io/badge/edgee-open%20source-blueviolet.svg)](https://www.edgee.cloud)
-[![Edgee](https://img.shields.io/badge/discord-edgee-blueviolet.svg?logo=discord)](https://www.edgee.cloud/discord)
-[![Docs](https://img.shields.io/badge/docs-published-blue)](https://www.edgee.cloud/docs/introduction)
-[![Coverage Status](https://coveralls.io/repos/github/edgee-cloud/cli/badge.svg)](https://coveralls.io/github/edgee-cloud/cli)
+[![Edgee](https://img.shields.io/badge/edgee-open%20source-blueviolet.svg)](https://www.edgee.ai)
+[![Edgee](https://img.shields.io/badge/discord-edgee-blueviolet.svg?logo=discord)](https://www.edgee.ai/discord)
+[![Docs](https://img.shields.io/badge/docs-published-blue)](https://www.edgee.ai/docs/introduction)
+[![Coverage Status](https://coveralls.io/repos/github/edgee-ai/cli/badge.svg)](https://coveralls.io/github/edgee-ai/cli)
 
 </div>
 
 ### Useful resources
 
 - Edgee's
-[Website](https://www.edgee.cloud),
-[Roadmap](https://roadmap.edgee.cloud/roadmap/data-collection-components), and
-[Documentation](https://www.edgee.cloud/docs/introduction)
-- Edgee's [Community Discord](https://www.edgee.cloud/discord)
-- Edgee on [X](https://x.com/edgee_cloud) and [LinkedIn](https://www.linkedin.com/company/edgee-cloud/)
+[Website](https://www.edgee.ai),
+[Roadmap](https://roadmap.edgee.ai/roadmap/data-collection-components), and
+[Documentation](https://www.edgee.ai/docs/introduction)
+- Edgee's [Community Discord](https://www.edgee.ai/discord)
+- Edgee on [X](https://x.com/edgee_ai) and [LinkedIn](https://www.linkedin.com/company/edgee-ai/)
 
 
 ## Getting started with the Edgee CLI
@@ -38,7 +38,7 @@ Install the Edgee CLI with your preferred method:
   <summary>Install script</summary>
 
   ```shell
-  $ curl https://install.edgee.cloud | sh
+  $ curl https://install.edgee.ai | sh
   ```
 
 </details>
@@ -47,7 +47,7 @@ Install the Edgee CLI with your preferred method:
   <summary>Homebrew</summary>
 
   ```shell
-  $ brew tap edgee-cloud/edgee
+  $ brew tap edgee-ai/cli
   $ brew install edgee
   ```
 
@@ -57,7 +57,7 @@ Install the Edgee CLI with your preferred method:
   <summary>From source</summary>
 
   ```shell
-  $ git clone https://github.com/edgee-cloud/cli.git
+  $ git clone https://github.com/edgee-ai/cli.git
   $ cd cli
   $ cargo build --release
   $ ./target/release/edgee-cli --version
@@ -70,7 +70,7 @@ Install the Edgee CLI with your preferred method:
 
 ### `edgee login`
 
-This command lets you log in using your Edgee account's API token (you can [create one here](https://www.edgee.cloud/~/me/settings/tokens)):
+This command lets you log in using your Edgee account's API token (you can [create one here](https://www.edgee.ai/~/me/settings/tokens)):
 
 
 ```shell
@@ -158,7 +158,7 @@ $ edgee components new --name foo --language javascript
 This command lets you compile the component in the current folder into a WebAssembly binary file.
 
 You can customize the behavior of the build command in the
-[manifest file](https://www.edgee.cloud/docs/services/registry/developer-guide#component-manifest-file)
+[manifest file](https://www.edgee.ai/docs/services/registry/developer-guide#component-manifest-file)
 by changing the target file name
 and the default build script. If you've created a new component with `edgee component new` the default build script
 should be a great starting point. By default, the output of this command will be a new .wasm file in the current folder.
@@ -210,7 +210,7 @@ $ edgee components push
  INFO Uploading Wasm file...
  INFO Creating new version...
  INFO org/name@version pushed successfully!
- INFO URL: https://www.edgee.cloud/~/registry/{organization}/{component}
+ INFO URL: https://www.edgee.ai/~/registry/{organization}/{component}
 ```
 
 The push command also lets you publish or unpublish an existing component via `--public` or `--private`.
@@ -292,9 +292,9 @@ If you're interested in contributing to Edgee, read our [contribution guidelines
 
 ## Reporting Security Vulnerabilities
 If you've found a vulnerability or potential vulnerability in our code, please let us know at
-[edgee-security](mailto:security@edgee.cloud).
+[edgee-security](mailto:security@edgee.ai).
 
 ## Versioning
-Edgee releases and their associated binaries are available on the project's [releases page](https://github.com/edgee-cloud/cli/releases).
+Edgee releases and their associated binaries are available on the project's [releases page](https://github.com/edgee-ai/cli/releases).
 
 The binaries are versioned following [SemVer](https://semver.org/) conventions.

@@ -11,13 +11,13 @@ Once you have a valid configuration file (see next section), you can run the Edg
 You can install and run `edgee` locally using the installer script:
 
 ```shell
-$ curl https://install.edgee.cloud | sh
+$ curl https://install.edgee.ai | sh
 ```
 
 Or via homebrew:
 
 ```shell
-$ brew tap edgee-cloud/edgee
+$ brew tap edgee-ai/cli
 $ brew install edgee
 ```
 
@@ -187,21 +187,21 @@ In this example, requests to `https://demo.edgee.dev/old-path` will be temporari
 
 ## Integrating with edgee components
 
-Check out the [official components docs](https://www.edgee.cloud/docs/components/overview) to dive into the
+Check out the [official components docs](https://www.edgee.ai/docs/components/overview) to dive into the
 components architecture.
 
 The Edgee proxy is designed for performance and extensibility, so you can easily integrate open source components based on the platforms you need. Here's a list of the components we've built so far:
-- [Amplitude](https://github.com/edgee-cloud/amplitude-component)
-- [Google Analytics](https://github.com/edgee-cloud/ga-component)
-- [Segment](https://github.com/edgee-cloud/segment-component)
-- [Piano Analytics](https://github.com/edgee-cloud/piano-analytics-component)
+- [Amplitude](https://github.com/edgee-ai/amplitude-component)
+- [Google Analytics](https://github.com/edgee-ai/ga-component)
+- [Segment](https://github.com/edgee-ai/segment-component)
+- [Piano Analytics](https://github.com/edgee-ai/piano-analytics-component)
 
 You just need point to the WebAssembly implementation in your proxy configuration. You may also build your
 own components for integrations we don't provide yet.
 
 ### Example
 
-Let's see how to implement data collection using the [amplitude component](https://github.com/edgee-cloud/amplitude-component).
+Let's see how to implement data collection using the [amplitude component](https://github.com/edgee-ai/amplitude-component).
 
 You simply need to add a new session to your configuration pointing to the WebAssembly component that implements the data collection protocol:
 
