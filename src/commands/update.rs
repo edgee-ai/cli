@@ -9,7 +9,7 @@ pub async fn run(_opts: Options) -> anyhow::Result<()> {
 
         let updater = Update::configure()
             .repo_owner("edgee-ai")
-            .repo_name("edgee")
+            .repo_name("cli")
             .bin_name("edgee")
             .current_version(self_update::cargo_crate_version!())
             .show_download_progress(true)
