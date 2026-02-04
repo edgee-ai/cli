@@ -257,7 +257,7 @@ pub async fn run(opts: Options) -> Result<()> {
     tracing::info!(
         "URL: {}",
         format!(
-            "https://www.edgee.cloud/~/registry/{}/{}",
+            "https://www.edgee.ai/~/registry/{}/{}",
             organization.slug, component_slug,
         )
         .green(),

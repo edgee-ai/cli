@@ -8,7 +8,7 @@ pub async fn run(_opts: Options) -> anyhow::Result<()> {
         use self_update::{backends::github::Update, Status};
 
         let updater = Update::configure()
-            .repo_owner("edgee-cloud")
+            .repo_owner("edgee-ai")
             .repo_name("edgee")
             .bin_name("edgee")
             .current_version(self_update::cargo_crate_version!())

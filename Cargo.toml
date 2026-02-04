@@ -2,11 +2,11 @@
 name = "edgee-cli"
 version = "1.0.0"
 description = "Edgee CLI to play with AI Gateway, tools, components..."
-authors = ["Edgee <opensource@edgee.cloud>"]
+authors = ["Edgee <opensource@edgee.ai>"]
 license = "Apache-2.0"
 keywords = ["edgee"]
-repository = "https://github.com/edgee-cloud/cli"
-homepage = "https://www.edgee.cloud"
+repository = "https://github.com/edgee-ai/cli"
+homepage = "https://www.edgee.ai"
 readme = true
 edition = "2021"
 

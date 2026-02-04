@@ -9,7 +9,7 @@ set -u
 
 # Package metadata
 
-GITHUB_OWNER='edgee-cloud'
+GITHUB_OWNER='edgee-ai'
 GITHUB_REPO='cli'
 
 # Helper utilities
@@ -33,8 +33,8 @@ _header() {
                                     ${_purple}Installer${_normal}
 
 $_divider
-${_bold}Website${_normal}:        https://www.edgee.cloud
-${_bold}Documentation${_normal}:  https://www.edgee.cloud/docs/introduction
+${_bold}Website${_normal}:        https://www.edgee.ai
+${_bold}Documentation${_normal}:  https://www.edgee.ai/docs/introduction
 $_divider
 
 EOF
@@ -43,7 +43,7 @@ EOF
 _usage() {
     cat 1>&2 <<EOF
 edgee-installer
-The installer for Edgee (https://www.edgee.cloud)
+The installer for Edgee (https://www.edgee.ai)
 
 ${_bold}USAGE${_normal}:
     edgee-installer [-h/--help]
